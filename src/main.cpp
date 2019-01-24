@@ -343,7 +343,7 @@ int main() {
               {
                 if (check_car_s > car_s && check_car_s - car_s < SAF_LIMIT)
                 {
-                	car_ahead = true;
+                  car_ahead = true;
                 }
               } 
               // On the left lane
@@ -351,7 +351,7 @@ int main() {
               {
                 if (fabs(car_s - check_car_s) < SAF_LIMIT)
                 {
-                	car_left = true;
+                  car_left = true;
                 }
               } 
               // On the right lane
@@ -359,7 +359,7 @@ int main() {
               {
                 if (fabs(car_s - check_car_s) < SAF_LIMIT)
                 {
-                	car_right = true;
+                  car_right = true;
                 }
               }              
             }            
@@ -388,7 +388,7 @@ int main() {
 //                  // simple test for changing lanes 
 //                  if(lane > 0)
 //                  {
-//                  	lane = 0; // left turn
+//                    lane = 0; // left turn
 //                  }                      
 //                }
 //              }
@@ -407,7 +407,7 @@ int main() {
 
             // Take action if there is car ahead 
             if (car_ahead) 
-            {            	
+            {              
               // if there is a left lane and no car on it, then change lane left
               if (!car_left && lane > 0) 
               {
