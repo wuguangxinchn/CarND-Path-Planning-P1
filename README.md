@@ -30,13 +30,12 @@ The logic of lane changing is simple (line 409~441):
 * We will try to go back to the center lane if we are not there. 
 
 ### Make the car run & change line smoothly  
+The code for this part is located in lines 445~544.   
 * Create anchor points - I define 5 points, two from previous trajectory, and three from the near future trajectory (evenly 30m spaced)
-* Create spline based on the anchor points  
-* Fill up the rest of points   
-The code for this part is located in lines 445~544. 
+* Create spline based on the anchor points, and then fill up the rest of points  
 
 ## Conclusion 
-This solution works well, it's simple but not perfect. I didn't use the FSM approach, there is also no cost functions here. It means I didn't calculate and evaluate the trajectories, the logic of when/how to change lanes is pre-configured. 
+This solution works well, it's simple but not perfect. I didn't follow FSM, there is also no cost functions here. It means I didn't calculate and evaluate the trajectories, the logic of when/how to change lanes is pre-configured. 
 
-PS: When reading the "Behavior Planning" chapter in the course, I have big confusion to understand "intended lane", "final lane" and "goal line"... until I found the link below: 
+PS: When reading the "Behavior Planning" chapter in the course, I have big confusion to understand "intended lane", "final lane" and "goal line"... until I found this link:   
 https://knowledge.udacity.com/questions/3662 
